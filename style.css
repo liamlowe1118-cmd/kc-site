@@ -8,112 +8,88 @@ body {
 
 header {
     background-color: #111;
-    position: relative;
-}
-
-/* Header container with flex and relative positioning */
-header .header-container {
-    position: relative;               
-    height: 150px;                    
-    display: flex;
-    justify-content: center;         
-    align-items: center;             
-}
-
-/* Images positioned on sides, vertically stretched to fill header without warping */
-header img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;        /* fills the header vertically */
-    width: auto;         /* keeps original aspect ratio */
-    object-fit: cover;   /* crop sides if needed, no distortion */
-}
-
-header img.left {
-    left: 10px;
-}
-
-header img.right {
-    right: 10px;
-}
-
-/* Heading centered and spaced from images */
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    z-index: 1;
     text-align: center;
-    padding: 0 180px; /* Prevent text from overlapping the side images */
+    padding: 20px 0;
+}
 
-    /* Static gold gradient effect */
+/* Header container */
+header .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center logo */
+header img.center-logo {
+    width: 75px; /* half of original 150px */
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+header h1 {
+    font-size: 2rem;
+    margin: 0;
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* ===== Navigation ===== */
 nav {
     background-color: #222;
+    overflow-x: auto;  
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* center links */
+    flex-wrap: wrap;         /* wrap if necessary */
+    gap: 20px;
     padding: 10px 0;
+    margin: 0;               /* remove left shift */
 }
 
 nav a {
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 20px;          
     font-weight: bold;
-
-    /* Static gold gradient effect */
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 nav a:hover {
     color: #fff;
 }
 
+/* ===== Main content ===== */
 main {
     padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
-/* Make all text inside main use the same gold gradient effect */
-main, 
-main h1, 
-main h2, 
-main h3, 
-main h4, 
-main h5, 
-main h6, 
-main p, 
-main li, 
-main span, 
-main strong, 
-main em {
+/* Make main images responsive */
+.responsive-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+main, main h1, main h2, main h3, main h4, main h5, main h6,
+main p, main li, main span, main strong, main em {
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.content-wrapper {
-    text-align: center;  /* Centers headings and paragraph */
-}
-
-.areas-container {
-    display: flex;               /* side-by-side lists */
-    justify-content: center;     /* center the two lists as a group */
-    gap: 50px;                   /* space between the columns */
-    margin-top: 20px;
-}
-
-.area-column {
-    list-style-type: none;       /* remove bullets */
-    padding: 0;
-    margin: 0;
-    text-align: left;            /* keep list items left-aligned within column */
 }
 
 footer {
@@ -124,8 +100,56 @@ footer {
     margin-top: 40px;
 }
 
-/* Social icons hover color fix */
-.social-icons a:hover {
-    color: white; /* Change both icon and text to white on hover */
-    opacity: 1;   /* Ensure full visibility */
+/* ===== Responsive styles ===== */
+@media (max-width: 1024px) {
+    header img.center-logo {
+        width: 65px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header img.center-logo {
+        width: 60px; 
+    }
+
+    .nav-links {
+        gap: 10px;
+        justify-content: center; /* ensure centered on mobile */
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header img.center-logo {
+        width: 50px; 
+    }
+
+    .nav-links {
+        gap: 5px;
+        justify-content: center; /* ensure centered */
+    }
+
+    nav a {
+        margin: 5px 8px;
+        font-size: 0.9rem;
+    }
 }

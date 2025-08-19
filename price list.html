@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Price Guide - Home Maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -34,28 +36,88 @@
             padding: 15px 0;
         }
 
+        /* Centered navigation links */
+        nav {
+            display: flex;
+            justify-content: center; /* center the links */
+            gap: 20px; /* space between links */
+            flex-wrap: nowrap; /* stay in one row */
+            padding: 10px 0;
+        }
+
         nav a {
-            margin-right: 15px;
+            text-decoration: none;
+            color: #000;
+            margin: 0;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-container {
+                height: auto;
+                padding: 20px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-container img.center-logo {
+                height: 80px;
+                width: auto;
+                margin: 5px 0;
+            }
+
+            .header-container h1 {
+                font-size: 1.8rem;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            nav {
+                gap: 10px; /* smaller gap to fit on narrow screens */
+            }
+
+            table {
+                font-size: 0.9rem; /* shrink slightly */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container h1 {
+                font-size: 1.5rem;
+                padding: 0 10px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 6px;
+            }
         }
     </style>
 </head>
 <body>
-   <header>
-    <div class="header-container">
-        <img src="images/kclogo2.png" alt="kclogo" class="left">
-        <h1>Prices (labour only)</h1>
-        <img src="images/kclogo2.png" alt="kclogo" class="right">
-    </div>
-</header>
+    <header>
+        <div class="header-container">
+            <img src="images/kclogotransparent.png" alt="Logo" class="center-logo">
+            <h1>Prices (labour only)</h1>
+        </div>
+    </header>
 
     <nav>
- <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="price list.html">Price</a>
         <a href="areas we serve.html">Areas We Serve</a>
         <a href="gallery.html">Gallery</a>
         <a href="about us.html">About Us</a>
-        
-        
     </nav>
 
     <main>
@@ -222,142 +284,30 @@
             </tr>
             <tr>
                 <td>Skirting/Architrave Installation</td>
-                <td class="price">£60–£120 per room</td>
+                <td class="price">£5–£10 p/m</td>
             </tr>
 
-            <!-- Tiling -->
+            <!-- Painting -->
             <tr class="section-heading">
-                <td colspan="2">Tiling</td>
+                <td colspan="2">Painting</td>
             </tr>
             <tr>
-                <td>Regrouting Tiles</td>
-                <td class="price">£10–£12 per m²</td>
+                <td>Single Coat</td>
+                <td class="price">£1.50–£2.50 p/m²</td>
             </tr>
             <tr>
-                <td>Remove Old Tiles</td>
-                <td class="price">£15 p/m²</td>
+                <td>Two Coats</td>
+                <td class="price">£2.50–£4.50 p/m²</td>
             </tr>
             <tr>
-                <td>Install Floor Tiles</td>
-                <td class="price">£25–£30 p/m²</td>
+                <td>Ceiling Painting</td>
+                <td class="price">£2.00–£3.50 p/m²</td>
             </tr>
             <tr>
-                <td>Install Wall Tiles</td>
-                <td class="price">£20–£25 p/m²</td>
-            </tr>
-
-            <!-- Flat Back Furniture -->
-            <tr class="section-heading">
-                <td colspan="2">Flat Pack Furniture Assembly</td>
-            </tr>
-            <tr>
-                <td>Standard Chair</td>
-                <td class="price">£15 each</td>
-            </tr>
-            <tr>
-                <td>Dining Table</td>
-                <td class="price">£20 each</td>
-            </tr>
-            <tr>
-                <td>Single/Double Bed</td>
-                <td class="price">£25 each</td>
-            </tr>
-            <tr>
-                <td>Tall Bookcase</td>
-                <td class="price">£20 each</td>
-            </tr>
-            <tr>
-                <td>3-Drawer Chest</td>
-                <td class="price">£20 each</td>
-            </tr>
-            <tr>
-                <td>2-Door Wardrobe</td>
-                <td class="price">£35 each</td>
-            </tr>
-            <tr>
-                <td>2-Door/3-Drawer Wardrobe</td>
-                <td class="price">£40 each</td>
-            </tr>
-
-            <!-- Wall Mounting -->
-            <tr class="section-heading">
-                <td colspan="2">Wall Mounting</td>
-            </tr>
-            <tr>
-                <td>Wall-Mounted Shelves</td>
-                <td class="price">£15–£25 each</td>
-            </tr>
-            <tr>
-                <td>TV Wall Mounting (up to 55")</td>
-                <td class="price">£30–£40 per TV</td>
-            </tr>
-            <tr>
-                <td>Curtain Poles/Rails</td>
-                <td class="price">£20–£30 per pole</td>
-            </tr>
-            <tr>
-                <td>Blinds Installation</td>
-                <td class="price">£15–£25 per set</td>
-            </tr>
-            <tr>
-                <td>Picture/Mirror Hanging</td>
-                <td class="price">£10–£20 per item</td>
-            </tr>
-            <tr>
-                <td>Floating Shelves</td>
-                <td class="price">£20–£30 each</td>
-            </tr>
-            <tr>
-                <td>Wall Hooks/Coat Racks</td>
-                <td class="price">£10–£15 each</td>
-            </tr>
-            <tr>
-                <td>Towel Rails</td>
-                <td class="price">£15–£20 each</td>
-            </tr>
-            <tr>
-                <td>Wall-Mounted Speakers</td>
-                <td class="price">£15–£25 each</td>
-            </tr>
-            <tr>
-                <td>Wall-Mounted Bike Racks</td>
-                <td class="price">£20–£30 each</td>
-            </tr>
-            <tr>
-                <td>Wall-Mounted Storage Units</td>
-                <td class="price">£25–£35 each</td>
-            </tr>
-
-            <!-- Appliance Installation -->
-            <tr class="section-heading">
-                <td colspan="2">Appliance Installation</td>
-            </tr>
-            <tr>
-                <td>Appliance Installation</td>
-                <td class="price">£50–£60 per appliance</td>
-            </tr>
-
-            <!-- Garden Carpentry -->
-            <tr class="section-heading">
-                <td colspan="2">Garden Carpentry</td>
-            </tr>
-            <tr>
-                <td>Shed Assembly</td>
-                <td class="price">£240 - £800</td>
-            </tr>
-            <tr>
-                <td>Decking Installation and Repairs</td>
-                <td class="price">£200–£250 per day</td>
-            </tr>
-            <tr>
-                <td>Fence/Gate Repair</td>
-                <td class="price">£60–£80 per metre</td>
+                <td>Door/Window Frame Painting</td>
+                <td class="price">£20–£35 each</td>
             </tr>
         </table>
     </main>
-
-    <footer>
-        &copy; 2025 Kitchen Culture & Home Maintenance
-    </footer>
 </body>
 </html>

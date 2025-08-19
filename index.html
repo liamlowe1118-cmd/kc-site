@@ -3,128 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Kitchen Culture & Home Maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        header {
-            background-color: #111;
-            position: relative;
-        }
-
-        .header-container {
-            position: relative;
-            height: 150px; /* original banner height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .header-container h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            z-index: 1;
-            text-align: center;
-            padding: 0 180px;
-            background: linear-gradient(to top, #a77d2d, #f8d171);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .header-container img.left,
-        .header-container img.right {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: 100%; /* fills the header vertically like original */
-            width: auto; /* keeps original aspect ratio */
-            object-fit: cover;
-        }
-
-        .header-container img.left {
-            left: 10px;
-        }
-
-        .header-container img.right {
-            right: 10px;
-        }
-
-        nav {
-            background-color: #222;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            background: linear-gradient(to top, #a77d2d, #f8d171);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        nav a:hover {
-            color: #fff;
-        }
-
-        main {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .statement-section {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .statement-section h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .statement-section p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .statement-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        footer {
-            background-color: #111;
-            color: #888;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
 </head>
 <body>
-    <header>
+    <header> 
         <div class="header-container">
-            <img src="images/kclogo2.png" alt="KC Logo" class="left">
+            <img src="images/kclogotransparent.png" alt="Logo" class="center-logo">
             <h1>Kitchen Culture & Home Maintenance</h1>
-            <img src="images/kclogo2.png" alt="KC Logo" class="right">
         </div>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="price list.html">Price</a>
-        <a href="areas we serve.html">Areas We Serve</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about us.html">About Us</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="price list.html">Price</a>
+            <a href="areas we serve.html">Areas We Serve</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about us.html">About Us</a>
+        </div>
     </nav>
 
     <main>
         <div class="statement-section">
             <h2>Kitchen Culture & Home Maintenance</h2>
             <p>Specialist in Kitchens and Complete Home Maintenance</p>
-            <img src="images/statement.jpg" alt="Statement Image">
+            <img src="images/statement.jpg" alt="Statement Image" class="responsive-image">
         </div>
 
         <p>At <strong>Kitchen Culture & Home Maintenance</strong>, we’re a small, dedicated team with a passion for delivering high-quality home renovations and maintenance services. We pride ourselves on our attention to detail, offering a personal and hands-on approach to every project.</p>

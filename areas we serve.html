@@ -4,13 +4,124 @@
     <meta charset="UTF-8">
     <title>Areas We Serve - Kitchen Culture & Home Maintenance</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Reset header and nav borders/shadows */
+        header, nav {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Header container and logos */
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .header-container img {
+            height: 100px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Nav links like Gallery page */
+        nav {
+            display: flex;
+            justify-content: center; /* center links */
+            gap: 20px; /* space between links */
+            flex-wrap: nowrap; /* keep links side by side */
+            overflow-x: auto; /* scroll if too small */
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            white-space: nowrap;
+            flex-shrink: 0; /* prevent shrinking */
+        }
+
+        /* Content headings and paragraphs */
+        .content-wrapper h2,
+        .content-wrapper p {
+            text-align: center;
+        }
+
+        /* Area list container */
+        .areas-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .area-column {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-container img {
+                height: 80px;
+                margin: 5px 0;
+            }
+
+            .header-container h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            .areas-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <img src="images/kclogo2.png" alt="kclogo" class="left">
+            <img src="images/kclogotransparent.png" alt="Kitchen Culture Logo">
             <h1>Areas We Serve</h1>
-            <img src="images/kclogo2.png" alt="kclogo" class="right">
         </div>
     </header>
 
