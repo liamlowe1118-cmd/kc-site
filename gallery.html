@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,84 +14,6 @@
     <title>Gallery - Home Maintenance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Navigation links */
-        nav {
-            display: flex;
-            justify-content: center; /* Center the nav links */
-            gap: 20px; /* space between links */
-            flex-wrap: nowrap; /* keep links side by side on mobile */
-            overflow-x: auto; /* allow horizontal scroll if needed */
-            padding: 10px 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #000;
-            margin: 0;
-            font-weight: bold;
-            white-space: nowrap;
-            flex-shrink: 0; /* prevent shrinking */
-        }
-
-        /* Gallery grid */
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .gallery-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-container img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .header-container {
-                height: auto;
-                padding: 20px 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header-container img.center-logo {
-                height: 80px;
-                width: auto;
-                margin: 5px 0;
-            }
-
-            .header-container h1 {
-                font-size: 1.8rem;
-                padding: 0 20px;
-                text-align: center;
-            }
-
-            nav {
-                gap: 10px; /* smaller gap to fit on mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-container h1 {
-                font-size: 1.5rem;
-                padding: 0 10px;
-            }
-
-            nav a {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -102,12 +23,15 @@
         </div>
     </header>
 
+    <!-- Updated Navigation -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="price list.html">Price</a>
-        <a href="areas we serve.html">Areas We Serve</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about us.html">About Us</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="price list.html">Price</a>
+            <a href="areas we serve.html">Areas We Serve</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about us.html">About Us</a>
+        </div>
     </nav>
 
     <main>
