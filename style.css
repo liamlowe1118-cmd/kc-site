@@ -1,4 +1,4 @@
-
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -93,6 +93,7 @@ main p, main li, main span, main strong, main em {
     -webkit-text-fill-color: transparent;
 }
 
+/* Footer */
 footer {
     background-color: #111;
     color: #888;
@@ -154,3 +155,4 @@ footer {
         font-size: 0.9rem;
     }
 }
+
