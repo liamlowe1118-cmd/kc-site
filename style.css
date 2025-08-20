@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
     margin: 0;
@@ -7,13 +8,13 @@ body {
     color: #D4AF37;
 }
 
+/* Header Styles */
 header {
     background-color: #111;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Header container */
 header .header-container {
     display: flex;
     flex-direction: column;
@@ -21,15 +22,12 @@ header .header-container {
     justify-content: center;
 }
 
-/* Center logo */
 header img.center-logo {
-    width: 75px; /* half of original 150px */
-    max-width: 80%;
+    width: 75px;
     height: auto;
     margin-bottom: 10px;
 }
 
-/* Heading */
 header h1 {
     font-size: 2rem;
     margin: 0;
@@ -38,62 +36,76 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
-/* ===== Navigation ===== */
+/* Navigation Styles */
 nav {
     background-color: #222;
-    overflow-x: auto;  
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
-.nav-links {
     display: flex;
-    justify-content: center; /* center links */
-    flex-wrap: wrap;         /* wrap if necessary */
-    gap: 20px;
+    justify-content: center; /* Center nav links */
     padding: 10px 0;
-    margin: 0;               /* remove left shift */
+    margin: 0;
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
-    margin: 0 20px;          
+    color: #D4AF37;
     font-weight: bold;
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0 20px;
+    font-size: 1rem;
     white-space: nowrap;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover {
     color: #fff;
+    background-color: transparent; /* Maintain gradient effect */
 }
 
-/* ===== Main content ===== */
+nav a.active {
+    color: #fff;
+}
+
+/* Main Content Styles */
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center;
     padding: 40px 20px;
+    margin: 0 auto;
     max-width: 1000px;
-    margin: auto;
+    text-align: center; /* Center the text inside main */
 }
 
-/* Make main images responsive */
 .responsive-image {
     width: 100%;
-    max-width: 100%;
     height: auto;
     display: block;
     margin: 20px 0;
 }
 
-main, main h1, main h2, main h3, main h4, main h5, main h6,
+main h1, main h2, main h3, main h4, main h5, main h6,
 main p, main li, main span, main strong, main em {
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Footer */
+/* Remove bullet points from the areas list */
+.areas-container ul {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Ensure no margins */
+}
+
+.areas-container li {
+    padding-left: 0; /* Optional: ensures no indentation for list items */
+}
+
+/* Footer Styles */
 footer {
     background-color: #111;
     color: #888;
@@ -102,7 +114,7 @@ footer {
     margin-top: 40px;
 }
 
-/* ===== Responsive styles ===== */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     header img.center-logo {
         width: 65px;
@@ -112,7 +124,7 @@ footer {
         font-size: 1.8rem;
     }
 
-    .nav-links {
+    nav {
         gap: 15px;
     }
 }
@@ -126,9 +138,8 @@ footer {
         width: 60px; 
     }
 
-    .nav-links {
+    nav {
         gap: 10px;
-        justify-content: center; /* ensure centered on mobile */
     }
 
     main {
@@ -142,12 +153,7 @@ footer {
     }
 
     header img.center-logo {
-        width: 50px; 
-    }
-
-    .nav-links {
-        gap: 5px;
-        justify-content: center; /* ensure centered */
+        width: 50px;
     }
 
     nav a {
@@ -155,4 +161,5 @@ footer {
         font-size: 0.9rem;
     }
 }
+
 
