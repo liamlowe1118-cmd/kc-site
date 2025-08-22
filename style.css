@@ -1,4 +1,3 @@
-
 /* General Styles */
 body {
     margin: 0;
@@ -115,6 +114,14 @@ main p, main li, main span, main strong, main em {
 
 .areas-container li {
     padding-left: 0; /* Optional: ensures no indentation for list items */
+}
+
+/* Remove unwanted bullets on homepage or specific sections */
+.index-section ul, 
+.index-section li {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 0;
+    margin: 0;
 }
 
 /* Gallery Page Styles */
