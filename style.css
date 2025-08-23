@@ -42,7 +42,6 @@ nav {
     justify-content: center; /* Center nav links */
     padding: 10px 0;
     margin: 0;
-    flex-wrap: wrap; /* Allow nav links to wrap on small widths in Firefox */
 }
 
 nav a {
@@ -68,17 +67,6 @@ nav a.active {
     color: #fff;
 }
 
-/* Firefox-specific fixes */
-@-moz-document url-prefix() {
-    nav a {
-        margin: 0 15px; /* Slightly smaller margins to prevent crossover */
-    }
-    nav a:hover, nav a.active {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; /* Preserve gradient on hover/active */
-    }
-}
-
 /* Main Content Styles */
 main {
     display: flex;
@@ -98,8 +86,10 @@ main {
     margin: 20px 0;
 }
 
+/* ✅ Gradient text for ALL content inside main */
 main h1, main h2, main h3, main h4, main h5, main h6,
-main p, main li, main span, main strong, main em {
+main p, main li, main span, main strong, main em,
+main td, main th {
     background: linear-gradient(to top, #a77d2d, #f8d171);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -114,31 +104,6 @@ main p, main li, main span, main strong, main em {
 
 .areas-container li {
     padding-left: 0; /* Optional: ensures no indentation for list items */
-}
-
-/* Remove unwanted bullets on homepage or specific sections */
-.index-section ul, 
-.index-section li {
-    list-style-type: none; /* Removes bullets */
-    padding-left: 0;
-    margin: 0;
-}
-
-/* Gallery Page Styles */
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center images in row */
-    gap: 10px; /* Spacing between images */
-    align-items: flex-start; /* Align images at top for even rows */
-}
-
-.gallery-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Preserve aspect ratio and fill container */
 }
 
 /* Footer Styles */
@@ -181,11 +146,6 @@ footer {
     main {
         padding: 20px 10px;
     }
-
-    .gallery-container img {
-        width: 100%; /* Full width on mobile */
-        margin: 0 auto;
-    }
 }
 
 @media (max-width: 480px) {
@@ -202,4 +162,6 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+
 
